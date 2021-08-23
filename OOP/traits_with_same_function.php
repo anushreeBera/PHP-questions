@@ -19,10 +19,14 @@ trait B {
 }
 
 class Talker {
-    use A, B {
-        B::smallTalk insteadof A;
-        A::bigTalk insteadof B;
-    }
+
+    //try uncommenting this - and comment the statement after this
+    use A, B;
+
+    // use A, B {
+    //     B::smallTalk insteadof A;
+    //     A::bigTalk insteadof B;
+    // }
 }
 
 $obj = new Talker();
